@@ -2,7 +2,7 @@
 
 > #### by guilhermevialle
 
-*I was going to create more features but I was too lazy*
+*I was going to create more features but I was too lazy - imcomplete....*
 
 ## Demonstrations
 ### Preview
