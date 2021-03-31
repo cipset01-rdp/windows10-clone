@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin borda($color) {
+    border: 1px solid $color;
+}
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.desktop {
+    width: 100%;
+    height: 94vh;
+
+    display: flex;
+
+    .folderOptions {
+        width: 425px;
+        height: 577px;
+
+        color: white;
+        position: absolute;
+        user-select: none;
+
+        display: none;
+        z-index: 5;
+        border: 1px solid #707070;
+
+        background-color: #2b2b2b;
+        left: 400px;
+        .linha {
+            height: 1px;
+            width: 90%;
+            margin: 2px auto;
+
+            background-color: #5c5c5c;
+        }
+
+        button {
+            all: unset;
+
+            display: block;
+            position: relative;
+
+            width: 100%;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: #3e3e40;
+            }
+
+            svg {
+                margin-left: 10px;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin: 0 35px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(14),
+            &:nth-child(15),
+            &:nth-child(16),
+            &:nth-child(8) {
+                p {
+                    margin: 0 9px;
+                }
+            }
+        }
+    }
+
+    .desktopOptions {
+        width: 225px;
+        height: 350px;
+        padding: 4px 2px;
+
+        background-color: #2b2b2b;
+        display: none;
+        border: 1px solid #707070;
+
+        color: white;
+        position: absolute;
+        user-select: none;
+
+        .linha {
+            height: 1px;
+            width: 90%;
+            margin: 2px auto;
+
+            background-color: #5c5c5c;
+        }
+
+        button {
+            all: unset;
+
+            display: block;
+            position: relative;
+
+            width: 100%;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 16px;
+                height: 16px;
+
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: #3e3e40;
+            }
+
+            svg {
+                margin-left: 10px;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin: 0 35px;
+            }
+
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(11),
+            &:nth-child(12),
+            &:nth-child(13),
+            &:nth-child(16),
+            &:nth-child(17) {
+                p {
+                    margin: 0 9px;
+                }
+            }
+        }
+    }
+
+    .folder {
+        @include flexbox();
+        flex-direction: column;
+
+        width: 60px;
+        height: fit-content;
+        user-select: none;
+
+        // position: absolute;
+        z-index: -1;
+
+        padding: 5px;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid #b4d0e760;
+            background-color: #b0b5b960;
+        }
+
+        &:focus {
+            background-color: #98bad660;
+        }
+
+        .folderIcon {
+            width: 100%;
+            height: 70%;
+            @include flexbox();
+
+            img {
+                width: 65%;
+                height: 65%;
+                max-height: 100%;
+
+                object-fit: cover;
+                pointer-events: none;
+            }
+        }
+
+        .folderName {
+            width: 100%;
+            height: 20%;
+            @include flexbox();
+
+            p {
+                text-align: center;
+                color: white;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.toolbar {
+    width: 100%;
+    height: 6vh;
+
+    background-color: #1d1d1e;
+    display: flex;
+
+    .tools {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        div {
+            width: 25px;
+            height: 100%;
+            @include flexbox();
+
+            user-select: none;
+
+            p {
+                font-size: 0.8rem;
+                color: white;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            &:hover {
+                background-color: #333535;
+            }
+        }
+    }
+
+    .apps {
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+
+        div {
+            width: 50px;
+            height: 100%;
+            @include flexbox();
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background-color: #333535;
+            }
+        }
+    }
+}
+
+.ds-selected {
+    border: 2px solid #b4d0e760;
+    background-color: #b0b5b960;
+}
+
+.arrow {
+    position: absolute;
+    right: 15px;
+}
