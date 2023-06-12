@@ -1,5 +1,7 @@
 ## Windows 10 Clone
 
+ This app consists of cloning the Windows 10 interface and its main front-end features.
+
 ## Demo
 
 ![Usage](https://github.com/guilhermevialle/Windows-Interface-Clone/blob/main/Windows%20Interface/Preview/gif.gif)
