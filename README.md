@@ -4,10 +4,6 @@
 
 ![Usage](https://github.com/guilhermevialle/Windows-Interface-Clone/blob/main/Windows%20Interface/Preview/gif.gif)
 
-   ## License
-
-- MIT
-------------
 
 ## 🔗 Social media
 
